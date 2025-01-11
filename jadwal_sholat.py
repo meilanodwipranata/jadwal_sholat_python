@@ -12,7 +12,7 @@ def get_lat_lon_kota():
     #  URL API dengan parameter pencarian
     url = "https://nominatim.openstreetmap.org/search?city={kota}&format=json"
     
-    # Header dengan User-Agent untuk identifikasi klien
+    # Header dengan User
     headers = {"User-Agent": "chrome"}
     
      # Mengirim permintaan GET ke API
@@ -24,7 +24,7 @@ def get_lat_lon_kota():
     # Mengubah respons JSON ke struktur data Python
     data = response.json()
     
-    # Mengambil nilai latitude dan longitude dari respons JSON
+    # Mengambil nilai latitude dan longitude dari respons request 
     lat = data[0]['lat']
     lon = data[0]['lon']
 
